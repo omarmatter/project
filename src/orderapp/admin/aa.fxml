@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="704.0" prefWidth="714.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication30.AaController">
+  <tabs>
+    <Tab text="Manage Products">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TabPane layoutX="6.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                        <Tab text="Add Product">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox layoutX="1.0" prefHeight="641.0" prefWidth="241.0" style="-fx-background-color: #4169E1;" />
+                                    <Label layoutX="266.0" layoutY="28.0" text="Add Product">
+                                       <font>
+                                          <Font name="Impact" size="36.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="AddProduct_Name" layoutX="267.0" layoutY="109.0" prefHeight="25.0" prefWidth="268.0" promptText="Name" />
+                                    <TextField fx:id="AddProduct_Pricce" layoutX="266.0" layoutY="225.0" prefHeight="25.0" prefWidth="265.0" promptText="price" />
+                                    <TextField fx:id="AddProduct_Quntity" layoutX="264.0" layoutY="294.0" prefHeight="25.0" prefWidth="269.0" promptText="Quntity" />
+                                    <TextArea fx:id="AddProduct_Dwscription" layoutX="266.0" layoutY="365.0" prefHeight="88.0" prefWidth="323.0" promptText="Description" />
+                                    <ComboBox fx:id="AddProduct_Category" layoutX="268.0" layoutY="169.0" prefWidth="150.0" promptText="Category" />
+                                    <Button fx:id="AddProduct_ButtonAdd" layoutX="260.0" layoutY="487.0" mnemonicParsing="false" onAction="#AddProduct_ButtonAdd" prefHeight="34.0" prefWidth="219.0" style="-fx-background-color: #4169E1; -fx-text-fill: black;" text="Add">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="ManageProduct_AddReset" layoutX="515.0" layoutY="488.0" mnemonicParsing="false" onAction="#ManageProduct_AddReset" prefHeight="35.0" prefWidth="219.0" style="-fx-background-color: #4169E1; -fx-text-fill: black;" text="Reset" />
+                                 </children></AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab text="Edit Product">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="241.0">
+                                       <children>
+                                          <VBox prefHeight="641.0" prefWidth="241.0" style="-fx-background-color: #4169E1;" />
+                                       </children>
+                                    </AnchorPane>
+                                    <Button fx:id="SditProduct_ButtonEdit" layoutX="263.0" layoutY="500.0" mnemonicParsing="false" onAction="#AddProduct_ButtonEdit" prefHeight="34.0" prefWidth="195.0" style="-fx-background-color: #4169E1; -fx-text-fill: black;" text="Edit">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Button>
+                                    <Label layoutX="258.0" layoutY="14.0" text="Edit Product">
+                                       <font>
+                                          <Font name="Impact" size="36.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="EditProduct_id" layoutX="258.0" layoutY="90.0" prefHeight="25.0" prefWidth="265.0" promptText="ID" />
+                                    <TextField fx:id="EditProduct_Name" layoutX="257.0" layoutY="147.0" prefHeight="25.0" prefWidth="268.0" promptText="Name" />
+                                    <ComboBox fx:id="EditProduct_Category" layoutX="257.0" layoutY="207.0" prefWidth="150.0" promptText="Category" />
+                                    <TextField fx:id="EditProduct_Pricce" layoutX="263.0" layoutY="278.0" prefHeight="25.0" prefWidth="265.0" promptText="price" />
+                                    <TextField fx:id="EditProduct_Quntity" layoutX="254.0" layoutY="337.0" prefHeight="25.0" prefWidth="269.0" promptText="Quntity" />
+                                    <TextArea fx:id="EditProduct_Dwscription" layoutX="246.0" layoutY="383.0" prefHeight="88.0" prefWidth="323.0" promptText="Description" />
+                                    <Button fx:id="ManageProduct_EditReset" layoutX="490.0" layoutY="501.0" mnemonicParsing="false" onAction="#ManageProduct_EditReset" prefHeight="32.0" prefWidth="202.0" style="-fx-background-color: #4169E1; -fx-text-fill: black;" text="Reset" />
+                                 </children></AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab text="Delete Product">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TextField fx:id="ManageProd_Delete" layoutX="146.0" layoutY="82.0" prefHeight="53.0" prefWidth="289.0" promptText="Enter ID" />
+                                    <Text layoutX="63.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delete Box" wrappingWidth="107.33984375">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <Button fx:id="ManageProduct_ButtonDelete" layoutX="170.0" layoutY="193.0" mnemonicParsing="false" onAction="#ManageProduct_ButtonDelete" prefHeight="32.0" prefWidth="345.0" style="-fx-background-color: #4169E1; -fx-text-fill: #000000;" text="Delete" />
+                                    <Button fx:id="ManageProduct_DeleteReset" layoutX="170.0" layoutY="249.0" mnemonicParsing="false" onAction="#ManageProduct_DeleteReset" prefHeight="32.0" prefWidth="344.0" style="-fx-background-color: #4169E1; -fx-text-fill: black;" text="Reset" />
+                                 </children></AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab text="View Product">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="ManageProductTableView" editable="true" layoutX="1.0" layoutY="95.0" prefHeight="406.0" prefWidth="834.0">
+                                       <columns>
+                                          <TableColumn fx:id="id_view" prefWidth="110.0" text="ID" />
+                                          <TableColumn fx:id="name_view" prefWidth="110.0" text="Name" />
+                                          <TableColumn fx:id="category_view" prefWidth="110.0" text="Category" />
+                                          <TableColumn fx:id="price_view" prefWidth="110.0" text="Price" />
+                                          <TableColumn fx:id="quentity_view" prefWidth="110.0" text="Quentity" />
+                                          <TableColumn fx:id="description_view" prefWidth="167.0" text="Description" />
+                                       </columns>
+                                    </TableView>
+                                    <Button fx:id="ManageProduct_ButtonRefresh" layoutX="502.0" layoutY="40.0" mnemonicParsing="false" onAction="#ManageProduct_ButtonRefresh" prefHeight="32.0" prefWidth="135.0" style="-fx-background-color: #4169E1; -fx-text-fill: black;" text="Refresh" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="Search For Product">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label fx:id="ManageProduct_labelBox" layoutX="23.0" layoutY="47.0" text="Search Box">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="ManageProduct_box" layoutX="108.0" layoutY="35.0" prefHeight="36.0" prefWidth="226.0" promptText="Enter Category" />
+                                    <TableView fx:id="ManageProductTableSearch" layoutX="23.0" layoutY="86.0" prefHeight="349.0" prefWidth="720.0">
+                                      <columns>
+                                        <TableColumn fx:id="id_search" prefWidth="110.0" text="ID" />
+                                        <TableColumn fx:id="name_search" prefWidth="110.0" text="Name" />
+                                          <TableColumn fx:id="category_search" prefWidth="110.0" text="Category" />
+                                          <TableColumn fx:id="price_search" prefWidth="110.0" text="Price" />
+                                          <TableColumn fx:id="quentity_search" prefWidth="110.0" text="Quentity" />
+                                          <TableColumn fx:id="description_search" prefWidth="167.0" text="Description" />
+                                      </columns>
+                                    </TableView>
+                                    <Button fx:id="ManageProduct_ButtonSearch" layoutX="355.0" layoutY="41.0" mnemonicParsing="false" onAction="#ManageProduct_ButtonSearch" prefHeight="32.0" prefWidth="114.0" style="-fx-background-color: #4169E1; -fx-text-fill: black;" text="Search" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Manage Clients">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TabPane layoutX="6.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="View Clients">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="544.0" prefWidth="766.0">
+                                 <children>
+                                    <TableView fx:id="ManageClient_Table" layoutX="4.0" layoutY="63.0" prefHeight="447.0" prefWidth="724.0">
+                                       <columns>
+                                          <TableColumn fx:id="ManageClient_IdView" prefWidth="110.0" text="ID" />
+                                          <TableColumn fx:id="ManageClient_NameView" prefWidth="110.0" text="Name" />
+                                          <TableColumn fx:id="ManageClient_EmailView" prefWidth="110.0" text="Email" />
+                                          <TableColumn fx:id="ManageClient_MobileView" prefWidth="110.0" text="Mobile" />
+                                          <TableColumn fx:id="ManageClient_PasswordView" prefWidth="170.0" text="Password" />
+                                          <TableColumn fx:id="Role_view" prefWidth="113.0" text="Role" />
+                                       </columns>
+                                    </TableView>
+                                    <Button fx:id="ManageClient_ButtonRefresh" layoutX="516.0" layoutY="26.0" mnemonicParsing="false" onAction="#ManageClient_ButtonRefresh" prefHeight="32.0" prefWidth="130.0" style="-fx-background-color: #4169E1; -fx-text-fill: black;" text="Refresh " />
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="Delete Client">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Text layoutX="76.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delete Box">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField fx:id="ManageClient_Delete" layoutX="157.0" layoutY="109.0" prefHeight="26.0" prefWidth="255.0" promptText="Enter ID" />
+                                    <Button fx:id="ManageClient_ButtonDelete" layoutX="190.0" layoutY="190.0" mnemonicParsing="false" onAction="#ManageClient_ButtonDelete" prefHeight="32.0" prefWidth="345.0" style="-fx-background-color: #4169E1; -fx-text-fill: #000000;" text="Delete" />
+                                    <Button fx:id="ManageClient_DeleteReset" layoutX="190.0" layoutY="247.0" mnemonicParsing="false" onAction="#ManageClient_DeleteReset" prefHeight="32.0" prefWidth="345.0" style="-fx-background-color: #4169E1; -fx-text-fill: black;" text="Reset" />
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                        <Tab text="Search For Client">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label fx:id="ManageClient_labelBox" layoutX="96.0" layoutY="70.0" text="Search Box">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="ManageClient_box" layoutX="186.0" layoutY="67.0" prefHeight="25.0" prefWidth="226.0" promptText="Enter ID" />
+                                    <TableView fx:id="ManageClient_TableSearch" layoutX="66.0" layoutY="133.0" prefHeight="349.0" prefWidth="654.0">
+                                       <columns>
+                                          <TableColumn fx:id="ManageClient_IdSearch" prefWidth="110.0" text="ID" />
+                                          <TableColumn fx:id="ManageClient_NameSearch" prefWidth="110.0" text="Name" />
+                                          <TableColumn fx:id="ManageClient_EmailSearch" prefWidth="110.0" text="Email" />
+                                          <TableColumn fx:id="ManageClient_MobileSearch" prefWidth="110.0" text="Mobile" />
+                                          <TableColumn fx:id="ManageClient_PasswordSearch" prefWidth="127.0" text="Password" />
+                                          <TableColumn fx:id="ManageClient_roleSearch" prefWidth="78.0" text="Role" />
+                                       </columns>
+                                    </TableView>
+                                    <Button fx:id="ManageCluent_ButtonSearch" layoutX="430.0" layoutY="64.0" mnemonicParsing="false" onAction="#ManageCluent_ButtonSearch" prefHeight="32.0" prefWidth="114.0" style="-fx-background-color: #4169E1; -fx-text-fill: black;" text="Search" />
+                                 </children></AnchorPane>
+                          </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="Manage Orders">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TabPane layoutX="6.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" style="-fx-border-style: hidden;" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="View Orders">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="ManageOrders_TabelView" editable="true" layoutX="100.0" layoutY="77.0" prefHeight="349.0" prefWidth="574.0">
+                                       <columns>
+                                          <TableColumn fx:id="ManageOrders_IdView" prefWidth="110.0" text="ID" />
+                                          <TableColumn fx:id="ManageOrders_ProductView" prefWidth="110.0" text="Product_ID" />
+                                          <TableColumn fx:id="ManageOrders_UserView" prefWidth="110.0" text="User_ID" />
+                                          <TableColumn fx:id="ManageOrders_QuantityView" prefWidth="110.0" text="Quantity" />
+                                          <TableColumn fx:id="ManageOrders_DateView" prefWidth="130.0" text="Date" />
+                                       </columns>
+                                    </TableView>
+                                    <Button fx:id="ViewOrder_button" layoutX="577.0" layoutY="29.0" mnemonicParsing="false" onAction="#ViewOrder_button" prefHeight="32.0" prefWidth="120.0" style="-fx-background-color: #4169E1; -fx-text-fill: black;" text="Refresh " />
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="Search For Order">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label fx:id="ManageProduct_labelBox1" layoutX="52.0" layoutY="72.0" text="Search Box">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="ManageOrders_Search" layoutX="135.0" layoutY="69.0" prefHeight="25.0" prefWidth="226.0" promptText="Enter ID" />
+                                    <Button fx:id="ManageOrders_ButtonSearch" layoutX="385.0" layoutY="66.0" mnemonicParsing="false" onAction="#ManageOrders_ButtonSearch" prefHeight="32.0" prefWidth="114.0" style="-fx-background-color: #4169E1; -fx-text-fill: black;" text="Search" />
+                                    <TableView fx:id="ManageOrders_TabelSearch" editable="true" layoutX="89.0" layoutY="107.0" prefHeight="349.0" prefWidth="574.0">
+                                       <columns>
+                                          <TableColumn fx:id="ManageOrders_IdSearch" prefWidth="110.0" text="ID" />
+                                          <TableColumn fx:id="ManageOrders_ProductSearch" prefWidth="110.0" text="Product_ID" />
+                                          <TableColumn fx:id="ManageOrders_UserSearch" prefWidth="110.0" text="User_ID" />
+                                          <TableColumn fx:id="ManageOrders_QuantitySearch" prefWidth="110.0" text="Quantity" />
+                                          <TableColumn fx:id="ManageOrders_DateSearch" prefWidth="130.0" text="Date" />
+                                       </columns>
+                                    </TableView>
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                        <Tab text="Add Order">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox prefHeight="641.0" prefWidth="241.0" style="-fx-background-color: #4169E1;" />
+                                    <Label layoutX="272.0" layoutY="14.0" text="Add Orders">
+                                       <font>
+                                          <Font name="Impact" size="36.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="ManageOrder_comboUsers" layoutX="272.0" layoutY="106.0" onAction="#ManageOrder_comboUsers" prefHeight="29.0" prefWidth="162.0" promptText="Select User" />
+                                    <ComboBox fx:id="ManageOrder_comboProdct" layoutX="272.0" layoutY="177.0" onAction="#ManageOrder_comboProdct" prefHeight="29.0" prefWidth="161.0" promptText="Select Product" />
+                                    <TextField fx:id="ManageOrder_AddQuentity" layoutX="274.0" layoutY="260.0" prefHeight="26.0" prefWidth="261.0" promptText="Quantity" />
+                                    <Button fx:id="ManageOrder_ButtonAdd" layoutX="286.0" layoutY="398.0" mnemonicParsing="false" onAction="#ManageOrder_ButtonAdd" prefHeight="32.0" prefWidth="325.0" style="-fx-background-color: #4169E1; -fx-text-fill: black;" text="Add " />
+                                    <DatePicker fx:id="ManageOrder_AddDate" layoutX="271.0" layoutY="324.0" prefHeight="26.0" prefWidth="174.0" promptText="Date" />
+                                    <Button fx:id="ManageOrder_AddReset" layoutX="282.0" layoutY="451.0" mnemonicParsing="false" onAction="#ManageOrder_AddReset" prefHeight="32.0" prefWidth="331.0" style="-fx-background-color: #4169E1; -fx-text-fill: black;" text="Reset" />
+                                 </children></AnchorPane>
+                          </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Manage Invoices">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TabPane layoutX="6.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Generate Invoices">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Text layoutX="36.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Compute The Invoice For All Orders" wrappingWidth="268.7135467529297">
+                                       <font>
+                                          <Font name="Impact" size="18.0" />
+                                       </font>
+                                    </Text>
+                                    <Button fx:id="Button_Generate" layoutX="349.0" layoutY="38.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="202.0" style="-fx-background-color: #4169E1; -fx-text-fill: black;" text="Compute" />
+                                    <Label fx:id="Label_Generate" layoutX="32.0" layoutY="101.0" prefHeight="50.0" prefWidth="312.0" />
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="Delete Invoice">
+                           <content>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <AnchorPane layoutX="-1.0" layoutY="1.0" prefHeight="580.0" prefWidth="894.0">
+                                       <children>
+                                          <Text layoutX="104.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delete Box">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Text>
+                                          <TextField fx:id="ManageInvoices_delete" layoutX="205.0" layoutY="93.0" prefHeight="26.0" prefWidth="236.0" promptText="Enter ID" />
+                                          <Button fx:id="ManageInvoices_ButtonDelete" layoutX="176.0" layoutY="187.0" mnemonicParsing="false" onAction="#ManageInvoices_ButtonDelete" prefHeight="32.0" prefWidth="345.0" style="-fx-background-color: #4169E1; -fx-text-fill: #000000;" text="Delete" />
+                                          <Button fx:id="ManageInvoices_DeleteReset" layoutX="177.0" layoutY="239.0" mnemonicParsing="false" onAction="#ManageInvoices_DeleteReset" prefHeight="34.0" prefWidth="346.0" style="-fx-background-color: #4169E1; -fx-text-fill: black;" text="Reset" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                      </Tab>
+                        <Tab text="View Invoices">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="544.0" prefWidth="766.0">
+                                       <children>
+                                          <TableView fx:id="ManageInvoices_View" layoutX="153.0" layoutY="84.0" prefHeight="349.0" prefWidth="442.0">
+                                             <columns>
+                                                <TableColumn fx:id="ManageInvoices_IdView" prefWidth="110.0" text="ID" />
+                                                <TableColumn fx:id="ManageInvoices_OrderView" prefWidth="110.0" text="Order_ID" />
+                                                <TableColumn fx:id="ManageInvoices_TotalView" prefWidth="110.0" text="Total_Price" />
+                                                <TableColumn fx:id="ManageInvoices_DateView" prefWidth="110.0" text="Date" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                    <Button fx:id="ViewInvoices_buttonRefresh" layoutX="587.0" layoutY="39.0" mnemonicParsing="false" onAction="#ViewInvoices_buttonRefresh" prefHeight="32.0" prefWidth="120.0" style="-fx-background-color: #4169E1; -fx-text-fill: black;" text="Refresh " />
+                                 </children></AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab text="Search For Invoice">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label fx:id="ManageClient_labelBox1" layoutX="72.0" layoutY="64.0" text="Search Box">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="ManageInvoices_Search" layoutX="164.0" layoutY="61.0" prefHeight="25.0" prefWidth="226.0" promptText="Enter ID" />
+                                    <Button fx:id="ManageInvoices_ButtonSearch" layoutX="426.0" layoutY="58.0" mnemonicParsing="false" onAction="#ManageInvoices_ButtonSearch" prefHeight="32.0" prefWidth="114.0" style="-fx-background-color: #4169E1; -fx-text-fill: black;" text="Search" />
+                                    <TableView fx:id="ManageInvoices_SearchTabel" layoutX="125.0" layoutY="146.0" prefHeight="349.0" prefWidth="442.0">
+                                       <columns>
+                                          <TableColumn fx:id="ManageInvoices_IdSearch" prefWidth="110.0" text="ID" />
+                                          <TableColumn fx:id="ManageInvoices_OrderSearch" prefWidth="110.0" text="Order_ID" />
+                                          <TableColumn fx:id="ManageInvoices_TotalSearch" prefWidth="110.0" text="Total_Price" />
+                                          <TableColumn fx:id="ManageInvoices_DateSearch" prefWidth="110.0" text="Date" />
+                                       </columns>
+                                    </TableView>
+                                 </children></AnchorPane>
+                          </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Change Password">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="640.0" prefWidth="826.0">
+               <children>
+                  <TextField fx:id="Odd_Password" layoutX="215.0" layoutY="203.0" prefHeight="26.0" prefWidth="284.0" promptText="Old Password" />
+                  <TextField fx:id="New_Password" layoutX="215.0" layoutY="257.0" prefHeight="26.0" prefWidth="285.0" promptText="new Password" />
+                  <Button fx:id="Button_ChangePassword" layoutX="224.0" layoutY="340.0" mnemonicParsing="false" onAction="#Button_ChangePassword" prefHeight="32.0" prefWidth="329.0" style="-fx-background-color: #4169E1; -fx-text-fill: black;" text="Change Password" />
+                  <Button fx:id="ChangePasswordReset" layoutX="224.0" layoutY="388.0" mnemonicParsing="false" onAction="#ChangePasswordReset" prefHeight="34.0" prefWidth="332.0" style="-fx-background-color: #4169E1; -fx-text-fill: black;" text="Reset" />
+               </children></AnchorPane>
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>
