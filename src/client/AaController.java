@@ -30,6 +30,8 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafxapplication30.products;
+import javafxapplication30.user;
 import javax.swing.JOptionPane;
 
 /**
@@ -575,7 +577,8 @@ public class AaController implements Initializable {
 
     @FXML
     private void ManageProduct_ButtonSearch(ActionEvent event) throws SQLException {
-        ManageProductTableSearch.getItems().clear();
+        ManageProductTableSearch.getItems()
+                .clear();
         String category = ManageProduct_box.getText();
 
         if (validate_input(category)) {
